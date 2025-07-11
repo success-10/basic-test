@@ -15,7 +15,7 @@ MongoDB Atlas (or local MongoDB)
 Git
 
 1. Installation
-git clone https://github.com/your-username/your-repo-name.git
+git clone [git repo](https://github.com/success-10/basic-test.git)
 cd your-repo-name
 npm install
 
@@ -30,7 +30,7 @@ Server runs at: http://localhost:5000
 
 4. API Documentation
 Postman Collection
-📥 Download collection (or update with your actual link)
+https://documenter.getpostman.com/view/33363379/2sB34fnMMN
 
 
 5. How to Test
