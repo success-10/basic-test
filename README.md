@@ -32,25 +32,15 @@ Server runs at: http://localhost:5000
 Postman Collection
 📥 Download collection (or update with your actual link)
 
-5. Main Endpoints
-Method	  Endpoint	                Description
-POST	 /api/retail	           Upload new retail price data
-GET	     /api/retail	           Get all retail data with pagination
-GET	    /api/retail/search	        Search and filter data with advanced filters
-GET	    /api/retail/search-product	Search products for analysis with pagination
-GET	    /api/retail/current-prices	Get all products with current price & performance
-GET	    /api/retail/analysis	     Get product analysis list with pagination
-GET     /api/retail/all-products      get all product
-DELETE	/api/retail/:id	           Delete a price entry
 
-6. How to Test
+5. How to Test
 Import the Postman collection and test each route.
 
 Use the JWT token to access protected routes (/api/retail endpoints).
 
 Test paginated endpoints using ?page=1&limit=10.
 
-7. Design Decisions & Assumptions
+6. Design Decisions & Assumptions
 Dates are formatted as July 11, 2025 to match UI display expectations.
 
 "Performance" is computed dynamically from latest vs previous price and not stored in the DB to avoid stale data.
@@ -61,7 +51,7 @@ Protect middleware is used to secure all sensitive routes.
 
 Uploaded files can be handled via Cloudinary if needed.
 
-8. API Query Examples
+7. API Query Examples
 Get filtered data with pagination:
 
 GET /api/retail/search?state=Lagos&product=Petrol&page=1&limit=10
@@ -69,3 +59,11 @@ GET /api/retail/search?state=Lagos&product=Petrol&page=1&limit=10
 Get product analysis with search:
 
 GET /api/retail/search-product?search=AGO&page=1&limit=10
+
+8. PORT=5000
+MONGO_URI=your_mongo_connection_string
+JWT_SECRET=your_jwt_secret
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+
